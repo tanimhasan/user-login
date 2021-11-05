@@ -7,7 +7,7 @@ $email    = "";
 $msg = "";
 $_SESSION['success'] = "";
 
-// connect to database
+// connect to databases
 $db = mysqli_connect('localhost', 'root', '', 'login');
 
 if (isset($_POST['login'])) {
@@ -15,10 +15,10 @@ if (isset($_POST['login'])) {
     $password = mysqli_real_escape_string($db, $_POST['password']);
 
     if (empty($username)) {
-        $msg =  "Username is required";
+        $msg =  "Enter Username is required";
     }
     if (empty($password)) {
-        $msg =  "Password is required";
+        $msg =  "Enter Password is required";
     }
 
     if ($msg == 0) {
