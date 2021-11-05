@@ -15,10 +15,10 @@ if (isset($_POST['login'])) {
     $password = mysqli_real_escape_string($db, $_POST['password']);
 
     if (empty($username)) {
-        $msg =  "Enter Username is required";
+        $msg =  "Username is required";
     }
     if (empty($password)) {
-        $msg =  "Enter Password is required";
+        $msg =  "Password is required";
     }
 
     if ($msg == 0) {
